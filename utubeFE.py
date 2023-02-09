@@ -16,7 +16,7 @@ onoff = input('Would you like to download videos? : (T|F)')
 
 if onoff == 'T' or onoff == 't':
     Download = input('Choose download directory: ')
-    uTubeDownload(Download)
+    uTubeDownload(Download, page)
 elif onoff == 'F' or onoff == 'f':
     print('Program Exit')
 else:

@@ -1,14 +1,16 @@
 import requests
 import re
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
 from bs4 import BeautifulSoup
 import csv
 
 def utubelink(page):
     driver = webdriver.Chrome()
-    linkcsv = 'links.csv'
+
+    userName = re.findall('@([a-zA-Z0-9]+)', page)
+
+    linkcsv = str(userName[0]) + '.csv'
     linkarry = []
     utube = 'https://www.youtube.com'
     
